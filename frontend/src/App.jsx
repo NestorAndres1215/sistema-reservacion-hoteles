@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/AuthProvider";
 
-import Login from "./pages/auth/Login";
+import Login from "./pages/login/Login";
 import Register from "./pages/auth/Register";
 import Unauthorized from "./pages/auth/Unauthorized";
 import AdminDashboard from "./pages/dashboard/AdminDashboard";
@@ -9,7 +9,7 @@ import RecepcionistaDashboard from "./pages/dashboard/RecepcionistaDashboard";
 import MainLayout from "./layouts/MainLayout";
 import ProtectedRoute from "./components/ProtectedRoute";
 import PublicRoute from "./components/PublicRoute";
-
+import "@fortawesome/fontawesome-free/css/all.min.css";
 export default function App() {
   return (
     <BrowserRouter>

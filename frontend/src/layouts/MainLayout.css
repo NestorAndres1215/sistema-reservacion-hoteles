@@ -1,0 +1,402 @@
+.layout-screen {
+  --navy-900: #071429;
+  --navy-800: #0b1f3a;
+  --navy-700: #14335c;
+  --white: #ffffff;
+  --off-white: #f5f7fa;
+  --gold: #b98d2c;
+  --text-muted: #6b7686;
+  --border: #e2e6ec;
+
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--off-white);
+}
+
+/* ============================================
+   Sidebar
+   ============================================ */
+.layout-sidebar {
+  width: 240px;
+  flex-shrink: 0;
+  background: linear-gradient(180deg, var(--navy-800) 0%, var(--navy-900) 100%);
+  color: var(--white);
+  padding: 20px 16px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.layout-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 8px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 16px;
+}
+
+.layout-brand-mark {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.layout-brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* ============================================
+   Usuario
+   ============================================ */
+.layout-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+}
+
+.layout-user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+  flex-shrink: 0;
+}
+
+.layout-user-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.layout-user-name {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.layout-user-role {
+  font-size: 11.5px;
+  color: var(--gold);
+}
+
+/* ============================================
+   Navegación
+   ============================================ */
+.layout-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  overflow-y: auto;
+}
+
+.layout-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 9px;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.layout-nav-link i {
+  width: 16px;
+  text-align: center;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.15s ease;
+}
+
+.layout-nav-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--white);
+}
+
+.layout-nav-link:hover i {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.layout-nav-link.active {
+  background: var(--white);
+  color: var(--navy-900);
+}
+
+.layout-nav-link.active i {
+  color: var(--gold);
+}
+
+/* ============================================
+   Logout
+   ============================================ */
+.layout-logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9px;
+  padding: 10px 12px;
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.layout-logout:hover {
+  background: #b3261e;
+  border-color: #b3261e;
+  color: var(--white);
+}
+
+/* ============================================
+   Contenido
+   ============================================ */
+.layout-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-content {
+  padding: 28px 32px;
+}
+
+/* ============================================
+   Toolbar
+   ============================================ */
+.layout-toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 16px 32px;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.layout-toolbar-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.layout-toolbar-title i {
+  color: var(--gold);
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.layout-toolbar-title h1 {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--navy-900);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.layout-toolbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+}
+
+.layout-toolbar-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.layout-toolbar-search i {
+  position: absolute;
+  left: 12px;
+  font-size: 12.5px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.layout-toolbar-search input {
+  width: 190px;
+  padding: 8px 12px 8px 34px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 13px;
+  background: var(--off-white);
+  color: var(--navy-900);
+  transition: border-color 0.15s ease, width 0.2s ease, background 0.15s ease;
+}
+
+.layout-toolbar-search input:focus {
+  outline: none;
+  border-color: var(--navy-700);
+  background: var(--white);
+  width: 230px;
+}
+
+.layout-toolbar-icon-btn {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--navy-800);
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.layout-toolbar-icon-btn:hover {
+  background: var(--off-white);
+  border-color: var(--navy-700);
+}
+
+.layout-toolbar-badge {
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 1.5px solid var(--white);
+}
+
+.layout-toolbar-divider {
+  width: 1px;
+  height: 26px;
+  background: var(--border);
+}
+
+.layout-toolbar-user {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.layout-toolbar-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--navy-800);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12.5px;
+  flex-shrink: 0;
+}
+
+.layout-toolbar-user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.layout-toolbar-user-name {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--navy-900);
+  white-space: nowrap;
+}
+
+.layout-toolbar-user-role {
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 860px) {
+  .layout-screen {
+    flex-direction: column;
+  }
+
+  .layout-sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .layout-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-x: auto;
+  }
+
+  .layout-nav-link span {
+    display: none;
+  }
+
+  .layout-user-info,
+  .layout-brand-name {
+    display: none;
+  }
+
+  .layout-logout span {
+    display: none;
+  }
+
+  .layout-content {
+    padding: 20px;
+  }
+
+  .layout-toolbar {
+    padding: 12px 16px;
+    flex-wrap: wrap;
+  }
+
+  .layout-toolbar-search {
+    display: none;
+  }
+
+  .layout-toolbar-user-info {
+    display: none;
+  }
+}

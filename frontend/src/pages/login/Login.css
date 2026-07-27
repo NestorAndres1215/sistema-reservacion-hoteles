@@ -1,0 +1,321 @@
+/* ============================================
+   Tokens
+   ============================================ */
+
+
+.login-screen {
+  --navy-900: #071429;
+  --navy-800: #0b1f3a;
+  --navy-700: #14335c;
+  --white: #ffffff;
+  --off-white: #f5f7fa;
+  --gold: #b98d2c;
+  --text-muted: #6b7686;
+  --border: #e2e6ec;
+  --error: #b3261e;
+  --radius: 14px;
+}
+
+/* ============================================
+   Layout
+   ============================================ */
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--off-white);
+  padding: 24px;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+.login-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 920px;
+  min-height: 560px;
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(7, 20, 41, 0.18);
+}
+
+/* ============================================
+   Panel izquierdo — marca
+   ============================================ */
+.login-brand {
+  background: linear-gradient(160deg, var(--navy-800) 0%, var(--navy-900) 100%);
+  color: var(--white);
+  padding: 48px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.login-brand::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+      circle at 85% 15%,
+      rgba(185, 141, 44, 0.12),
+      transparent 45%
+    ),
+    radial-gradient(circle at 10% 90%, rgba(255, 255, 255, 0.06), transparent 40%);
+  pointer-events: none;
+}
+
+.login-brand-mark {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.login-brand-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.login-brand-subtitle {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.72);
+  margin: 0 0 32px;
+  max-width: 280px;
+}
+
+.login-brand-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.login-brand-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.login-brand-list i {
+  color: var(--gold);
+  font-size: 12px;
+}
+
+/* ============================================
+   Panel derecho — formulario
+   ============================================ */
+.login-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 320px;
+}
+
+.login-form-header {
+  margin-bottom: 28px;
+}
+
+.login-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.login-form-header h2 {
+  margin: 6px 0 6px;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.login-hint {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.login-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fdecea;
+  color: var(--error);
+  font-size: 13px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin: 0 0 16px;
+}
+
+.login-field {
+  display: block;
+  margin-bottom: 16px;
+}
+
+.login-label {
+  display: block;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--navy-800);
+  margin-bottom: 6px;
+}
+
+.login-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.login-input-icon {
+  position: absolute;
+  left: 14px;
+  font-size: 14px;
+  color: var(--text-muted);
+  pointer-events: none;
+}
+
+.login-input-wrap input {
+  width: 100%;
+  padding: 11px 14px 11px 40px;
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  font-size: 14px;
+  color: var(--navy-900);
+  background: var(--white);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.login-input-wrap input:focus {
+  outline: none;
+  border-color: var(--navy-700);
+  box-shadow: 0 0 0 3px rgba(20, 51, 92, 0.12);
+}
+
+.login-toggle-visibility {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px;
+  display: flex;
+}
+
+.login-toggle-visibility:hover {
+  color: var(--navy-800);
+}
+
+.login-submit {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--navy-800);
+  color: var(--white);
+  border: none;
+  border-radius: 9px;
+  padding: 12px 16px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.15s ease;
+}
+
+.login-submit:hover:not(:disabled) {
+  background: var(--navy-900);
+}
+
+.login-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-register {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-muted);
+  margin: 18px 0 0;
+}
+
+.login-register a {
+  color: var(--navy-800);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-register a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================
+   Fix: autofill de Chrome / gestor de contraseñas
+   de Google pinta el input de amarillo y rompe la
+   paleta navy/blanco. Esto lo neutraliza.
+   ============================================ */
+.login-input-wrap input:-webkit-autofill,
+.login-input-wrap input:-webkit-autofill:hover,
+.login-input-wrap input:-webkit-autofill:focus,
+.login-input-wrap input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--navy-900);
+  caret-color: var(--navy-900);
+  transition: background-color 9999s ease-in-out 0s;
+  box-shadow: 0 0 0 1000px var(--white) inset;
+  -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
+  border-color: var(--border);
+}
+
+/* Firefox */
+.login-input-wrap input:autofill {
+  filter: none;
+  box-shadow: 0 0 0 1000px var(--white) inset;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 760px) {
+  .login-card {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+
+  .login-brand {
+    padding: 36px 32px;
+  }
+
+  .login-brand-subtitle,
+  .login-brand-list {
+    display: none;
+  }
+
+  .login-form-panel {
+    padding: 36px 32px;
+  }
+}

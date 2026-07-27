@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@fortawesome/fontawesome-free':
+        specifier: ^7.3.1
+        version: 7.3.1
       '@hookform/resolvers':
         specifier: ^5.4.3
         version: 5.4.3(react-hook-form@7.83.0(react@19.2.8))(yup@1.7.1)(zod@4.4.3)
@@ -192,6 +195,10 @@ packages:
   '@eslint/plugin-kit@0.7.2':
     resolution: {integrity: sha512-+CNAzxglkrpNf/kKywqQfk74QjtceuOE7Qm+AF8miRvPF/wmmK5+OJOgVh3AVTT3RP2mH3+FOaxlE5v72owk0A==}
     engines: {node: ^20.19.0 || ^22.13.0 || >=24}
+
+  '@fortawesome/fontawesome-free@7.3.1':
+    resolution: {integrity: sha512-wmglKKPDIkgV3aWlZzWECCPoGIkYCulzBwxG9+w7rc5BGapZ6cPMpoPOT8k36J0Ni7PPX6c/rsoMWfS4d1MUMg==}
+    engines: {node: '>=6'}
 
   '@hookform/resolvers@5.4.3':
     resolution: {integrity: sha512-jtS1DEvkT1ql8ImIDQL+UmkhEnDmt3Bp7Yt4q5XQpc0JiQ8b8+I7yT/KQze4gw9Ocmi9xa9ef6zxifizPgdp3A==}
@@ -1273,6 +1280,8 @@ snapshots:
     dependencies:
       '@eslint/core': 1.2.1
       levn: 0.4.1
+
+  '@fortawesome/fontawesome-free@7.3.1': {}
 
   '@hookform/resolvers@5.4.3(react-hook-form@7.83.0(react@19.2.8))(yup@1.7.1)(zod@4.4.3)':
     dependencies:
