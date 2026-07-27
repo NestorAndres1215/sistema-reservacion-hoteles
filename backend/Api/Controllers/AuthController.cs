@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
-namespace FootballManagerSystem.API.Controllers;
+namespace API.Controllers;
 
 [ApiController]
 [Route("api/auth")]

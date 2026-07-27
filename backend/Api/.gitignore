@@ -1,9 +1,11 @@
-﻿# Visual Studio
-.vs/
-*.suo
-*.user
-
-# Build
+﻿.vs/
+**/.vs/
 bin/
 obj/
-wwwroot/
+
+
+# Archivos de usuario
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
